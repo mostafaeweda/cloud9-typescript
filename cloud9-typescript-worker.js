@@ -28,7 +28,7 @@ handler.init = function(callback) {
 handler.analyze = function(doc, fullAst, callback) {
     if (handler.disabled)
         return callback();
-    handler.invokeReporter("tsc " + handler.path.replace(/^\/workspace/, handler.workspaceDir), this.$postProcess, callback);
+    handler.invokeReporter("tsc " + handler.path.replace(/.*\/workspace/, handler.workspaceDir), this.$postProcess, callback);
 };
 
 /**
