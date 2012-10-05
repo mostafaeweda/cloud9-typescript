@@ -30,7 +30,7 @@ return '/**\n' +
 'handler.analyze = function(doc, fullAst, callback) {\n' +
 '    if (handler.disabled)\n' +
 '        return callback();\n' +
-'    handler.invokeReporter("tsc " + handler.path.replace(/^\\/workspace/, handler.workspaceDir), this.$postProcess, callback);\n' +
+'    handler.invokeReporter("tsc " + handler.path.replace(/.*\\/workspace/, handler.workspaceDir), this.$postProcess, callback);\n' +
 '};\n' +
 '\n' +
 '/**\n' +
